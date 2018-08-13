@@ -1,0 +1,7 @@
+client/node_modules
+client/.laya
+client/.vscode
+client/.git
+client/dist
+server/node_modules
+server/dist
