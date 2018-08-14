@@ -2,6 +2,23 @@ export  {Ui}
 import View=laya.ui.View;
 import Dialog=laya.ui.Dialog;
 module Ui {
+    export class GameMainUI extends View {
+		public killnum:Laya.FontClip;
+		public banjing:Laya.FontClip;
+
+        public static  uiView:any ={"type":"View","props":{"width":750,"top":0,"right":0,"left":0,"height":1334,"bottom":0},"child":[{"type":"Image","props":{"y":55,"x":25,"skin":"comp/wz1.png"}},{"type":"Image","props":{"y":111,"x":25,"skin":"comp/wz2.png"}},{"type":"FontClip","props":{"y":49,"x":123,"var":"killnum","value":"0123","spaceX":-8,"skin":"comp/fontclip_num.png","sheet":".0123456789"}},{"type":"FontClip","props":{"y":104,"x":123,"var":"banjing","value":"0123","spaceX":-8,"skin":"comp/fontclip_num.png","sheet":".0123456789"}}]};
+        constructor(){ super()}
+        createChildren():void {
+        
+            super.createChildren();
+            this.createView(Ui.GameMainUI.uiView);
+
+        }
+
+    }
+}
+
+module Ui {
     export class gameOverUI extends View {
 		public reStartBtn:Laya.Button;
 		public shareBtn:Laya.Button;
@@ -95,23 +112,6 @@ module Ui {
         
             super.createChildren();
             this.createView(Ui.rankViewUI.uiView);
-
-        }
-
-    }
-}
-
-module Ui {
-    export class testViewUI extends View {
-		public killnum:Laya.FontClip;
-		public banjing:Laya.FontClip;
-
-        public static  uiView:any ={"type":"View","props":{"width":750,"top":0,"right":0,"left":0,"height":1334,"bottom":0},"child":[{"type":"Image","props":{"y":55,"x":25,"skin":"comp/wz1.png"}},{"type":"Image","props":{"y":111,"x":25,"skin":"comp/wz2.png"}},{"type":"FontClip","props":{"y":49,"x":123,"var":"killnum","value":"0123","spaceX":-8,"skin":"comp/fontclip_num.png","sheet":".0123456789"}},{"type":"FontClip","props":{"y":104,"x":123,"var":"banjing","value":"0123","spaceX":-8,"skin":"comp/fontclip_num.png","sheet":".0123456789"}}]};
-        constructor(){ super()}
-        createChildren():void {
-        
-            super.createChildren();
-            this.createView(Ui.testViewUI.uiView);
 
         }
 
